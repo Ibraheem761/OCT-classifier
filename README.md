@@ -1,2 +1,2 @@
-Optical Coherence Tomography Classifier //
-Credit: Jayanthi Raja
+Optical Coherence Tomography Classifier <br>
+**Credits:** Jayanthi Raja
