@@ -10,9 +10,10 @@ html_temp = """
     """
 st.markdown(html_temp,unsafe_allow_html=True)
 
-path = Path('OCT_squeezenet.pkl')
+proj_path = ''
+p_path = Path(proj_path)
 
-learner = load_learner('')
+learner = load_learner(proj_path, 'OCT_squeezenet.pkl')
 
 option = st.radio('', ['Choose a test image', 'Choose your own image'])
 
@@ -26,6 +27,7 @@ if option == 'Choose your own image':
     pred_class,pred_idx,outputs = learner.predict(pil2fast(img))
     st.image(img)
     st.write('Prediction:',pred_class)
+    
 if option == 'Choose a test image':
   test_images = os.listdir('Sample images')
   test_image = st.selectbox('Please select a test image:', test_images)
