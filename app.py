@@ -27,7 +27,7 @@ if option == 'Choose your own image':
     st.image(img)
     st.write('Prediction:',pred_class)
 if option == 'Choose a test image':
-  test_images = os.listdir('/content/Sample images')
+  test_images = os.listdir('Sample images')
   test_image = st.selectbox('Please select a test image:', test_images)
   file_path = 'Sample images/' + test_image
   img = PIL.Image.open(file_path)
