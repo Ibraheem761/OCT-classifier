@@ -10,10 +10,9 @@ html_temp = """
     """
 st.markdown(html_temp,unsafe_allow_html=True)
 
-proj_path = '/content/gdrive/MyDrive/OCT/'
-p_path = Path(proj_path)
+path = Path('OCT_squeezenet.pkl')
 
-learner = load_learner(proj_path, 'OCT_squeezenet.pkl')
+learner = load_learner('')
 
 option = st.radio('', ['Choose a test image', 'Choose your own image'])
 
