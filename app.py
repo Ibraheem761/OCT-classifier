@@ -18,7 +18,7 @@ learner = load_learner(proj_path, 'OCT_squeezenet.pkl')
 option = st.radio('', ['Choose a test image', 'Choose your own image'])
 
 if option == 'Choose your own image':
-  uploaded_file = st.file_uploader("Choose an image...", type="jpg")
+  uploaded_file = st.file_uploader("Choose an image...", type="None")
   if uploaded_file is not None:
     img = PIL.Image.open(uploaded_file)
     import torchvision.transforms as tfms
